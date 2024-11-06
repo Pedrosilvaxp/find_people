@@ -1,7 +1,6 @@
 # find_people
- 
-Estou feliz em compartilhar meu primeiro projeto com API.
-Utilizando uma API com dados de várias pessoas, com o objetivo de encontrá-las pesquisando seu nome. 
+
+Utilizando uma API com dados de pessoas, com o objetivo de encontrá-las pesquisando seu nome. 
 
 Pretendo adicionar mais funcionalidades ao projeto. 
 
