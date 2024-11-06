@@ -1,0 +1,152 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Poppins";
+}
+
+body {
+    background: url('imagens/imagemFundo.jpg') center center/cover no-repeat fixed;
+    color: white;
+}
+
+h1 {
+    margin-right: 30%;
+    font-size: 3em;
+}
+
+header {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.623), transparent);
+    backdrop-filter: blur(1px);
+    padding: 22px 0 22px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 46px;
+    z-index: 2;
+}
+nav ul {
+    list-style-type: none;
+    display: flex;
+    align-items: top;
+    column-gap: 20px;
+}
+a {
+    font-size: 30px;
+    text-decoration: none;
+    color: white;
+}
+
+
+section {
+    background-color: white;
+    border-radius: 1px;
+    max-width: 1100px;
+    text-align: center;
+    height: 56vh;
+    padding: 50px;
+    margin: auto;
+}
+
+form {
+    backdrop-filter: blur(1px);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 340px;
+    margin: -100px auto 0;
+    z-index: 1;
+}
+form h2 {
+    font-size: 22px;
+    text-shadow: 1px 2px 4px black;
+}
+form input {
+    border: 1px solid lightgrey;
+    width: 100px;
+}
+#nome {
+    width: 100%;
+    text-transform: capitalize;
+}
+#buscar {
+    padding: 14px 30px;
+    font-weight: bold;
+    transition-duration: .4s;
+    cursor: pointer;
+    width: 200px;
+    color: white;
+    border: 1px solid white;
+    background-color: #28B5D4;
+    margin: 10px auto;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 43px;
+}
+#buscar:hover {
+    border: 1px solid #28B5D4;
+    background-color: white;
+    color: #28B5D4;
+}
+input {
+    margin: 8px auto;
+    display: block;
+    padding: 15px; 
+    border-radius: 4px;
+    border: 0 solid;
+    width: 430px;
+}
+
+#iconLoader {
+    position: relative;
+    opacity: 0;
+    z-index: 10;
+    color: #28B5D4;
+    font-size: 30px;
+    transition-duration: .1s;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row-reverse;
+    flex-wrap: wrap-reverse;
+    column-gap: 40px;
+    margin-top: 4em;
+}
+.novaPessoa {
+    padding: 10px 20px 20px;
+    border-radius: 10px;
+    width: 250px;
+    transition-duration: .2s;
+}
+.novaPessoa img {
+    margin-bottom: 20px;
+}
+.novaPessoa p {
+    text-align: left;
+}
+.foto {
+    object-fit: cover;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+}
+
+p {
+    font-size: 17px;
+    text-align: center;
+    color: black;
+    transition-duration: .2s;
+}
+div {
+    margin-bottom: 80px;
+}
+
+
+@media (max-width: 540px) {
+    h1 {font-size: 23px;}
+    a {font-size: 26px;}
+    form h2 {font-size: 20px;}
+}
