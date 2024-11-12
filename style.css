@@ -67,7 +67,6 @@ form input {
 }
 #nome {
     width: 100%;
-    text-transform: capitalize;
 }
 #buscar {
     padding: 14px 30px;

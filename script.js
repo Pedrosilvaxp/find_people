@@ -6,7 +6,7 @@ const circleLoader = document.querySelector('#iconLoader');
 
 
 async function getPeople() {
-    const response = await fetch("https://randomuser.me/api/?inc=name,phone,location,dob,picture&nat=br&results=4000"); 
+    const response = await fetch("https://randomuser.me/api/?inc=name,phone,location,dob,picture&nat=br&results=4000");
 
     return response.json();
 }
@@ -21,7 +21,7 @@ formulario.addEventListener('submit', async (event) => {
     const pessoas = data.results;
 
     const nomeBusca = document.querySelector('#nome').value;
-    // Buscando nome 
+    // Buscando nome
     const pessoaEncontrada = pessoas.find(pessoa => pessoa.name.first.toLowerCase() === nomeBusca.toLowerCase() || pessoa.name.last.toLowerCase() === nomeBusca.toLowerCase());
 
     circleLoader.style.opacity = '0';
