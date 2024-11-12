@@ -6,7 +6,7 @@ const circleLoader = document.querySelector('#iconLoader');
 
 
 async function getPeople() {
-    const response = await fetch("https://randomuser.me/api/?nat=br&results=4000");
+    const response = await fetch("https://randomuser.me/api/?inc=name,phone,location,dob,picture&nat=br&results=4000"); 
 
     return response.json();
 }
