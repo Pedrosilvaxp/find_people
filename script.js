@@ -6,12 +6,13 @@ const circleLoader = document.querySelector('#iconLoader');
 
 
 async function getPeople() {
-    const response = await fetch('https://randomuser.me/api/?results=1000');
+    const response = await fetch("https://randomuser.me/api/?results=4000");
 
     return response.json();
 }
 
 formulario.addEventListener('submit', async (event) => {
+
     event.preventDefault(); // Evitando que os dados sejam submetidos
 
     paragrafo.style.opacity = '0';
@@ -21,8 +22,9 @@ formulario.addEventListener('submit', async (event) => {
     const pessoas = data.results;
 
     const nomeBusca = document.querySelector('#nome').value;
-    // Buscando nome
-    const pessoaEncontrada = pessoas.find(pessoa => pessoa.name.first == nomeBusca || pessoa.name.last == nomeBusca);
+    // Buscando nome 
+    const pessoaEncontrada = pessoas.find(pessoa => pessoa.name.first.toLowerCase() === nomeBusca.toLowerCase() || pessoa.name.last.toLowerCase() === nomeBusca.toLowerCase());
+
 
     circleLoader.style.opacity = '0';
     paragrafo.style.opacity = '1';
@@ -48,24 +50,10 @@ formulario.addEventListener('submit', async (event) => {
         const phone = document.createElement('p');
         phone.textContent = `Telefone: ${pessoaEncontrada.phone}`;
 
-
         // Gerando imagem
         const foto = document.createElement('img');
-        if (pessoaEncontrada.gender == 'female') {
-            if (pessoaEncontrada.dob.age <= 50) {
-                foto.setAttribute('src', 'imagens/mulher1.png');
-            } else {
-                foto.setAttribute('src', 'imagens/senhora.jpg');
-            }
-        } else {
-            if (pessoaEncontrada.dob.age <= 50) {
-                foto.setAttribute('src', 'imagens/homem1.jpg');
-            } else {
-                foto.setAttribute('src', 'imagens/senhor.jpg');
-            }
-        }
+        foto.setAttribute('src', `${pessoaEncontrada.picture.large}`);
         foto.classList.add('foto');
-
 
         // Atribuindo informações
         novaPessoa.append(foto, nome, pais, idade, phone);
