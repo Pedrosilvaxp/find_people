@@ -6,13 +6,12 @@ const circleLoader = document.querySelector('#iconLoader');
 
 
 async function getPeople() {
-    const response = await fetch("https://randomuser.me/api/?results=4000");
+    const response = await fetch("https://randomuser.me/api/?nat=br&results=4000");
 
     return response.json();
 }
 
 formulario.addEventListener('submit', async (event) => {
-
     event.preventDefault(); // Evitando que os dados sejam submetidos
 
     paragrafo.style.opacity = '0';
@@ -24,7 +23,6 @@ formulario.addEventListener('submit', async (event) => {
     const nomeBusca = document.querySelector('#nome').value;
     // Buscando nome 
     const pessoaEncontrada = pessoas.find(pessoa => pessoa.name.first.toLowerCase() === nomeBusca.toLowerCase() || pessoa.name.last.toLowerCase() === nomeBusca.toLowerCase());
-
 
     circleLoader.style.opacity = '0';
     paragrafo.style.opacity = '1';
@@ -50,7 +48,7 @@ formulario.addEventListener('submit', async (event) => {
         const phone = document.createElement('p');
         phone.textContent = `Telefone: ${pessoaEncontrada.phone}`;
 
-        // Gerando imagem
+        // Gerando foto
         const foto = document.createElement('img');
         foto.setAttribute('src', `${pessoaEncontrada.picture.large}`);
         foto.classList.add('foto');
