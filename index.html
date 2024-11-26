@@ -25,14 +25,39 @@
     </header>
 
     <section>
-        <form action="#">
+        <form action="#" autocomplete="on">
             <h2>Encontre a pessoa que deseja</h2>
 
             <input type="text" class="efeito1"  name="buscar" id="nome" placeholder="Nome ou sobrenome">
+            <input type="number" name="idade" id="idade" placeholder="Idade">
+
+            <select name="selecao" id="escolha">
+                <option value="br">Brasil</option>
+                <option value="us">Estados Unidos</option>
+                <option value="es">Espanha</option>
+                <option value="au">Austrália</option>
+                <option value="ca">Canadá</option>
+                <option value="ch">Suíça</option>
+                <option value="de">Alemanha</option>
+                <option value="dk">Dinamarca</option>
+                <option value="fi">Finlândia</option>
+                <option value="fr">França</option>
+                <option value="gb">Inglaterra</option>
+                <option value="ie">Irlanda</option>
+                <option value="in">India</option>
+                <option value="ir">Irã</option>
+                <option value="mx">Mexico</option>
+                <option value="nl">Holanda</option>
+                <option value="no">Noruega</option>
+                <option value="nz">Nova Zelândia</option>
+                <option value="rs">Sérvia</option>
+                <option value="tr">Turquia</option>
+                <option value="ua">Ucrânia</option>
+            </select>
             
             <input type="submit" value="Buscar" id="buscar">
         </form>
-
+ 
         <i class="bx bx-loader-circle bx-spin bx-rotate-90" id="iconLoader"></i>
 
         <p></p>
@@ -40,6 +65,8 @@
         <div class="container">
             
         </div>
+
+        <button id="backBtn"><i class='bx bx-chevron-up'></i></button>
     </section>
 
     <script src="script.js"></script> 
